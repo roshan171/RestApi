@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Update Example</title>
+</head>
+<body>
+    <h2>Update Record Using API</h2>
+    <button onclick="updateRecord()">Update Record</button>
+
+    <script>
+        function updateRecord() {
+            const recordId = 2; // Replace with the actual record ID you want to update
+
+            // Replace with the actual data you want to update
+            const updatedData = {
+                name: 'Updated Name',
+                age: 25
+            };
+
+            fetch(`http://localhost/API%20Tutorial/api/api-update.php?id=${recordId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(updatedData),
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

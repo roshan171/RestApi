@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Fetch All Example</title>
+</head>
+<body>
+    <h2>Fetch All Records Using API</h2>
+    <button onclick="fetchRecords()">Fetch Records</button>
+
+    <div id="recordsContainer"></div>
+
+    <script>
+        function fetchRecords() {
+            fetch('http://localhost/API%20Tutorial/api/api-fetchall.php', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+            .then(response => response.json())
+            .then(data => displayRecords(data))
+            .catch(error => console.error('Error:', error));
+        }
+
+        function displayRecords(data) {
+            const recordsContainer = document.getElementById('recordsContainer');
+
+            if (data.status) {
+                const records = data.data;
+                let html = '<ul>';
+
+                records.forEach(record => {
+                    html += `<li>ID: ${record.id}, Name: ${record.name}, Email: ${record.email}</li>`;
+                });
+
+                html += '</ul>';
+                recordsContainer.innerHTML = html;
+            } else {
+                recordsContainer.innerHTML = '<p>No records found.</p>';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Rahul",
+        "body": "This is the body of Post 4.",
+        "userId": 5
+    },
+    {
+        "title": "Jayesh",
+        "body": "This is the body of Post 5.",
+        "userId": 6
+    },
+    {
+        "title": "Simaran",
+        "body": "This is the body of Post 6.",
+        "userId": 7
+    }
+   
+]

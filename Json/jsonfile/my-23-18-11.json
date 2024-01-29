@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "name": "Roshan Dhawde",
+        "city": "Mumbai",
+        "email": "roshan@gmail.com"
+    },
+    {
+        "id": "2",
+        "name": "Vishal More",
+        "city": "Pune",
+        "email": "vishal@gmail.com"
+    },
+    {
+        "id": "3",
+        "name": "Yogesh More ",
+        "city": "Mumbai",
+        "email": "yogesh@gmail.com"
+    },
+    {
+        "id": "4",
+        "name": "Raj Patil",
+        "city": "Delhi",
+        "email": "raj@gmail.com"
+    },
+    {
+        "id": "5",
+        "name": "Kajal Pawar",
+        "city": "Kokan",
+        "email": "kajal@gmail.com"
+    }
+]

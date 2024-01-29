@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Delete Example</title>
+</head>
+<body>
+    <h2>Delete Record Using API</h2>
+    <button onclick="deleteRecord()">Delete Record</button>
+
+    <script>
+        function deleteRecord() {
+            const recordId = 1; // Replace with the actual record ID you want to delete
+
+            fetch(`http://localhost/API%20Tutorial/api/api-delete.php?id=${recordId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

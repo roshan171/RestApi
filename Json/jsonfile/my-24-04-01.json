@@ -1,0 +1,26 @@
+[
+    {
+        "id": "2",
+        "name": "Simran",
+        "city": "Lalbag",
+        "email": "simran@gmail.com"
+    },
+    {
+        "id": "3",
+        "name": "Ankita",
+        "city": "Alibagh",
+        "email": "ankita@gmail.com"
+    },
+    {
+        "id": "4",
+        "name": "Roshan",
+        "city": "Mumbai",
+        "email": "roshan@gmail.com"
+    },
+    {
+        "id": "5",
+        "name": "Ankita",
+        "city": "Goa",
+        "email": "ankita@gmail.com"
+    }
+]

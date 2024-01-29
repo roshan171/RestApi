@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+</head>
+<body>
+    <h2>CRUD Application</h2>
+    <button onclick="getStudents()">Get Students</button>
+    <button onclick="insertStudent()">Insert Student</button>
+    <button onclick="updateStudent()">Update Student</button>
+    <button onclick="deleteStudent()">Delete Student</button>
+
+    <script>
+        function getStudents() {
+            fetch('http://localhost/API%20Tutorial/api/api.php', {
+                method: 'GET',
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+        }
+
+        function insertStudent() {
+            const data = {
+                name: "Ankita",
+                city: "Alibagh",
+                email: "ankita@gmail.com",
+            };
+
+            fetch('http://localhost/API%20Tutorial/api/api.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+        }
+
+        function updateStudent() {
+            const id = 1; // Replace with the actual student ID
+            const data = {
+                name: "Simran",
+                city: "Mumbai",
+                email: "simran@gmail.com",
+            };
+
+            fetch(`http://localhost/API%20Tutorial/api/api.php?id=${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+        }
+
+        function deleteStudent() {
+            const id = 1; // Replace with the actual student ID
+
+            fetch(`http://localhost/API%20Tutorial/api/api.php?id=${id}`, {
+                method: 'DELETE',
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

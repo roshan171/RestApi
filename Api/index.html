@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Insert Example</title>
+</head>
+<body>
+    <h2>Insert Data Using API</h2>
+    <button onclick="insertData()">Insert Data</button>
+
+    <script>
+        function insertData() {
+            const data = {
+                sname: "Roshan",
+                scity: "Goa",
+                semail: "roshan@gmail.com",
+            };
+
+            fetch('http://localhost/API%20Tutorial/api/api-insert.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+
+</body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
